@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login OR SIGNUP</h1>
+        <button id="loginBtn"><a href="/login">LOGIN</a></button>
+        <button id="registerBtn"><a href="/register">REGISTER</a></button>
+    </div>
+    
+    <script>
+        // Styling for button click events
+        const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+
+        // Function to add styling on button click
+        const handleClick = (button) => {
+            button.style.backgroundColor = '#333';
+            button.style.color = '#fff';
+        };
+
+        // Adding click event listeners
+        loginBtn.addEventListener('click', () => handleClick(loginBtn));
+        registerBtn.addEventListener('click', () => handleClick(registerBtn));
+    </script>
+</body>
+</html>

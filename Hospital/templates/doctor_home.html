@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Page</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    <!-- <link rel="stylesheet" href="{% static 'styles.css' %}"> Link to an external CSS file -->
+   
+</head>
+<body>
+    <nav class="navbar">
+        <h1>{{ user.username }}'s DOCTORS PAGE</h1>
+        <ul class="nav-list">
+            <li><a href="{% url 'myprofile' %}">My Profile</a></li>
+            <li><a href="{% url 'addblog' %}">Create a Vlog</a></li>
+            <li><a href="{% url 'tblogs' %}">My Vlogs</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
